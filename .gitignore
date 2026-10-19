@@ -1,0 +1,49 @@
+
+# Credenciales y documentos privados
+Documentacion/OUTClientCreado.json
+Documentacion/URL.md
+
+# Variables de entorno y secretos
+.env
+.env.*
+**/.env
+**/.env.*
+
+# Permitir plantillas de ejemplo sin secretos
+!.env.example
+!**/.env.example
+
+# Dependencias y archivos generados
+node_modules/
+**/node_modules/
+dist/
+**/dist/
+dist-ssr/
+build/
+coverage/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# Archivos locales y del sistema
+*.local
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editores
+.vscode/*
+!.vscode/extensions.json
+.idea/
+
+# Claves y certificados privados
+*.pem
+*.key
+*.p12
+*.pfx
+id_rsa
+id_ed25519

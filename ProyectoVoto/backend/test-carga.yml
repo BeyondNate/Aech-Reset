@@ -1,0 +1,19 @@
+config:
+  target: "http://localhost:3001"
+  phases:
+    - duration: 20
+      arrivalRate: 15
+      name: "Simulación de votación masiva concurrente"
+  defaults:
+    headers:
+      Authorization: "Bearer TOKEN_MOCK_UPCH"
+scenarios:
+  - name: "Estudiante emitiendo sufragio"
+    flow:
+      - post:
+          url: "/api/votos"
+          # Creamos una cabecera personalizada con un correo único que cumple el patrón @upch.pe
+          headers:
+            x-test-email: "estudiante.test.{{ $randomString }}@upch.pe"
+          json:
+            lista_id: "50a37d2b-228b-46fe-aabd-5e36955b941f"
